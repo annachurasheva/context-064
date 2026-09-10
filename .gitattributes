@@ -5,6 +5,7 @@
 * text=auto eol=lf
 
 # Явно текстовые.
+*.svg  text
 *.md   text
 *.js   text
 *.ts   text
@@ -19,4 +20,4 @@
 *.png  binary
 *.ico  binary
 *.jpg  binary
-*.svg  text
+
