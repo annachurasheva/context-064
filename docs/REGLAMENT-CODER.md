@@ -1,4 +1,5 @@
 # Регламент работы Кодера (проекты Anna-Ch)
+Координата: annachurasheva/context-064 · docs/REGLAMENT-CODER.md · v3 · 2026-09-10
 
 ## Роли
 - Anna-Ch — руководитель и заказчик. Единственный, кто коммитит в GitHub.
