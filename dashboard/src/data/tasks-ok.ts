@@ -1,5 +1,3 @@
-// Реестр заданий для ОК (8-й контур dmiandr/context)
-
 export interface Task {
   id: string
   title: string

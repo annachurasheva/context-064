@@ -1,9 +1,3 @@
-
-### Файл: dashboard/src/data/ok.ts
-```ts
-// Данные для ОК (8-й контур dmiandr/context)
-// Шаблон готов к заполнению
-
 export interface OkData {
   overallScore: number
   v01: {
