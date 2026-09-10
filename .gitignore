@@ -1,2 +1,35 @@
-# Служебный каталог инструмента CodeAssistant
+# ============================================================
+# .gitignore — проект «annachurasheva/context-064»
+# ============================================================
+
+# --- Сборка и артефакты ---
+
+.edge_test_*/
+*.log
+dist/
+
+# --- Локальные данные AI-ассистентов ---
 .codeassistant/
+
+# --- Файлы ОС ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Логи ---
+*.log
+
+# --- Пакеты расширений (бинарные артефакты) ---
+*.crx
+*.xpi
+*.nex
+
+# --- Node.js ---
+dashboard/node_modules/
+dashboard/donor/node_modules/
+dashboard/donor/dist/
+node_modules/
+package-lock.json
+yarn.lock
+
+

@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ============================================================
+ * Светлая тема в духе Gmail: белый фон, поверхности #F6F8FC,
+ * рамки #DADCE0, текст #202124 / #5F6368, акцент синий #1A73E8.
+ * Токены зарегистрированы в @theme → доступны как утилиты
+ * Tailwind (bg-ink-950, text-mauve, font-display и т.д.).
+ * ============================================================ */
+@theme {
+  /* нейтральная шкала: 950 — самый светлый (фон), 100 — самый тёмный (текст) */
+  --color-ink-950: #ffffff;
+  --color-ink-900: #f6f8fc;
+  --color-ink-850: #eef1f6;
+  --color-ink-800: #e6eaf0;
+  --color-ink-700: #d3d9e0;
+  --color-ink-600: #c6cdd6;
+  --color-ink-500: #aeb6c0;
+  --color-ink-400: #8a94a0;
+  --color-ink-300: #5f6368;
+  --color-ink-200: #3c4043;
+  --color-ink-100: #202124;
+
+  /* акценты Gmail */
+  --color-mauve: #1a73e8; /* основной синий */
+  --color-lav: #1765d8; /* синий при наведении */
+  --color-sky: #4285f4; /* светлый синий */
+  --color-rose: #d93025; /* красный: предупреждения */
+  --color-grass: #188038; /* зелёный: успех */
+  --color-teal: #00796b; /* бирюзовый: терминал */
+  --color-lemon: #f9ab00; /* янтарный: акцент кода */
+  --color-peach: #e8710a; /* оранжевый */
+
+  --font-display: "Unbounded", "Manrope", sans-serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+}
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-ink-100);
+  background: var(--color-ink-950);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(26, 115, 232, 0.22);
+}
+
+/* панель с внутренней прокруткой */
+.panel-in {
+  scrollbar-width: thin;
+  scrollbar-color: #c6cdd6 transparent;
+}
+.panel-in::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+.panel-in::-webkit-scrollbar-thumb {
+  background: #d3d9e0;
+  border-radius: 8px;
+}
+.panel-in::-webkit-scrollbar-thumb:hover {
+  background: #aeb6c0;
+}
+
+/* ── живой фон: точечная сетка + мягкие цветовые пятна ── */
+.bg-blueprint {
+  background-image: radial-gradient(rgba(32, 33, 36, 0.06) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+}
+.glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+.glow-mauve { background: rgba(26, 115, 232, 0.13); }
+.glow-teal { background: rgba(0, 121, 107, 0.1); }
+.glow-peach { background: rgba(249, 171, 0, 0.14); }
+
+/* пульсирующая зелёная точка */
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(24, 128, 56, 0.45); }
+  70% { box-shadow: 0 0 0 9px rgba(24, 128, 56, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(24, 128, 56, 0); }
+}
+.pulse-dot {
+  animation: pulseRing 2.4s ease-out infinite;
+}
+
+/* медленное вращение (спиннер упаковки архива) */
+@keyframes spin360 {
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin360 0.9s linear infinite;
+}
+
+/* мигающий курсор */
+@keyframes blinkCaret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret {
+  animation: blinkCaret 1.1s step-end infinite;
+}
+
+/* появление блоков при загрузке */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.rise-in {
+  animation: riseIn 0.65s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+/* появление при смене файла / скролле */
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.panel-in-anim {
+  animation: panelIn 0.35s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+/* подчёркивание строк кода при наведении */
+.code-line {
+  border-left: 2px solid transparent;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.code-line:hover {
+  background: rgba(26, 115, 232, 0.07);
+  border-left-color: #1a73e8;
+}
+
+/* плавное раскрытие аккордеона */
+.acc-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+.acc-body.open {
+  grid-template-rows: 1fr;
+}
+.acc-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* тост */
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.toast-in {
+  animation: toastIn 0.28s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+/* надзаголовок секций */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-mauve);
+}
