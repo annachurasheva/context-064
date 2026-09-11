@@ -27,11 +27,10 @@ TASK-0301 · 09.11.2026
 Дельта — подтверждает PASS.
 
 ***
-***
 
 ## TASK-0302 · 11.09.2026
 
-**Коммит:** `24bd744`
+**Коммит:** `9b7faa9`
 
 **Суть задачи:**
 
@@ -42,12 +41,28 @@ TASK-0301 · 09.11.2026
 [01] PAGE, [02] SELECTED_ENTITY, [03] ENTITY_CANDIDATES, [04] EVENT_CONTAINER, [05] EVENT_TEXT,
 [06] DATE_TIME, [07] ROOT_CONTEXT, [08] COMMENT_URL, [09] TRIANGLE_ANCHOR, [10] PAGE_BEHAVIOR,
 [11] SHADOW_DOM, [12] CONTEXT_MENU, [13] RAW_HTML, [14] SELECTORS, [15] NOTES.
-Отчёты сохраняются в `docs/dom-inspection/OK_<scenario>_<timestamp>.json` с header (PORTAL, PAGE_TYPE, URL, DATE, TIME, ENTITY_TYPE, ENTITY_NAME, EVENT_TYPE, SOURCE_CONTEXT) и sections.
-Стоп-условия реализованы: endpoint не отвечает → ошибка и выход; вкладка ok.ru не найдена → ошибка и выход.
-Примечание: полноценная работа с CDP требует WebSocket (модуль PSWebSocket или внешняя утилита); текущая версия заполняет секции [01] PAGE и [15] NOTES через HTTP endpoint, остальные секции помечены как `pending_cdp_websocket`.
+Отчёты сохраняются в `docs/dom-inspection/OK_<scenario>_<timestamp>.json` с header и sections.
+Примечание: секции [01] PAGE и [15] NOTES заполнены через HTTP endpoint, остальные требовали WebSocket.
 
 ***
 
-TASK-0302 не закрыт, а разделён на два этапа: транспорт и каркас готовы (этап 1), сбор DOM через WebSocket — этап 2, тем же номером задачи, статус IN WORK.
+## TASK-0302 (этап 2) · 11.09.2026
+
+**Коммит:** `0610007`
+
+**Суть задачи:**
+
+Реализован полноценный сбор DOM через `System.Net.WebSockets.ClientWebSocket` (встроен в .NET Core/PowerShell 7, внешние модули запрещены).
+Алгоритм: подключение по `webSocketDebuggerUrl`, выполнение CDP-команд (`Page.enable`, `DOM.enable`, `DOM.getDocument`, `DOM.querySelectorAll`, `Runtime.evaluate`).
+Добавлена валидация сценария по URL открытой вкладки:
+- `profile_page` → URL содержит `/profile/`
+- `group_page` → URL содержит `/group/` или главная сообщества
+- `comments_author` → лента с комментариями (/feed/, /topic/, /discussion/)
+При несовпадении — СТОП с сообщением «для сценария X откройте страницу с …, сейчас открыто: <url>».
+Параметр `-UrlFilter` добавлен как ручное перекрытие для нестандартных страниц.
+Заполнены секции [02]–[14] реальными данными со страницы OK.ru (имя профиля/группы, текст события, дата, HTML, селекторы).
+Статусы секций изменены на `complete` по факту заполнения.
+Стоп-условие: если WebSocket-рукопожатие не удалось — скрипт останавливается с явной строкой ошибки.
+Версия скрипта: 2.0.0.
 
 ***
