@@ -303,7 +303,7 @@ if ($null -eq $rootNodeId) {
                                         # Удаляем строки с "Ответить", даты (месяцы)
                                         $months = "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек|января|февраля|марта|апреля|июня|июля|августа|сентября|октября|ноября|декабря"
                                         $lines = $eventText -split "`n" | Where-Object { 
-                                            $_ -notmatch "Ответить" -and $_ -notmatch "$months" -and $_ -length -gt 10 
+                                            $_ -notmatch "Ответить" -and $_ -notmatch "$months" -and $_.Length -gt 10 
                                         }
                                         $eventText = ($lines -join " ").Substring(0, [Math]::Min(500, ($lines -join " ").Length))
                                         
