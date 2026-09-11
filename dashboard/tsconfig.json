@@ -8,13 +8,13 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-	"esModuleInterop": true,
-	"allowSyntheticDefaultImports": true
-    "isolatedModules": true,
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
+    "isolatedModules": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
