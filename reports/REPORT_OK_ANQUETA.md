@@ -27,6 +27,17 @@
 - **Метод:** ручной протокол F12 (без обстрела портала).
 - **Коммит:** `8f23df323a4aa6858610564b5133ff001e10eb1b` — `feat: добавить InspectOK-DOM-v01.ps1 (ручной протокол F12 с анонсом)`
 
+### Шаг 3 — Инструкция ручного (F12) поиска атомов A1–A6
+- **Файл:** `docs/INSTRUCTION_OK_ATOMS_A1_A6.md`
+- **Основа:** принцип сбора из `connecting_a_new_portalinstruction.md` (ручной протокол F12).
+- **Назначение:** пошаговый регламент сбора недостающих атомов анкеты A1–A6 (urls/Mark, ListActiveZones, zone.element/caption, username/GetUserAlias, attachMenuDomElement/menuAttachBefore, attachBadge/attachBadgeMode) из живой разметки ok.ru.
+- **Коммит:** `07b20b254496b649acc510dd63ca00f5aa80104d` — `docs: добавить инструкцию ручного (F12) поиска атомов A1-A6 для Анкеты-OK`
+
+### Шаг 4 — Чистка README (описание деятельности ветки)
+- **Файл:** `README.md`
+- **Суть:** удалены конфликтующие блоки исходного проекта (про vk.ru, Change Log, Known Issues, Contribution), оставлено только описание деятельности ветки `qwen-develop` (Анкета-OK).
+- **Дополнение:** в отчёт добавлена ссылка на новую инструкцию `INSTRUCTION_OK_ATOMS_A1_A6.md`.
+
 ---
 
 ## 3. Предшествующие документы (в папке docs)
@@ -35,6 +46,7 @@
 - `docs/OK_ANALYSIS_GAPS.md` — анализ недостающих данных по ОК.
 - `docs/REGULATION_OK_COLLECTION.md` — первый регламент (авто-CDP подход, TASK-0302).
 - `docs/REGULATION_OK_COLLECTION_V01.md` — актуальный регламент (ручной протокол F12).
+- `docs/INSTRUCTION_OK_ATOMS_A1_A6.md` — инструкция ручного поиска атомов A1–A6.
 - `docs/ok_ru_mbuktskska.txt` — исходные данные инспекции ОК.
 - `docs/connecting_a_new_portalinstruction.md` — чек-лист ручных проверок.
 - `docs/SUMMARY_ANALYSIS_VKRU.md` — эталонный сводный анализ VK.RU.
