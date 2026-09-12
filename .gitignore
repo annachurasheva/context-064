@@ -1,29 +1,66 @@
-# ============================================================
-# .gitignore — проект «annachurasheva/context-064»
-# ============================================================
-
-# --- Сборка и артефакты ---
-
-.edge_test_*/
-*.log
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
 dist/
+build/
+target/
+.gradle/
 
-# --- Локальные данные AI-ассистентов ---
-.codeassistant/
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# --- Файлы ОС ---
+# System
 .DS_Store
 Thumbs.db
-desktop.ini
+.env
+.env.local
+*.env.*
 
-# --- Логи ---
+# Logs and temp files
 *.log
+*.tmp
+coverage/
+htmlcov/
+.coverage
 
-# --- Пакеты расширений (бинарные артефакты) ---
-*.crx
-*.xpi
-*.nex
+# Compiled files
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
 
-# --- Node.js ---
-dashboard/node_modules/
-node_modules/
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
