@@ -1,5 +1,5 @@
 # Регламент работы Кодера (проекты Anna-Ch)
-Координата: annachurasheva/context-064 · docs/REGLAMENT-CODER.md · v3 · 2026-09-10
+Координата: annachurasheva/context-064 · docs/REGLAMENT-CODER.md · v4 · 2026-09-12
 
 ## Роли
 - Anna-Ch — руководитель и заказчик. Единственный, кто коммитит в GitHub.
@@ -35,7 +35,7 @@
 3. Одна строка: «Диффы TASK-NNNN готовы к передаче Anna-Ch».
 
 ## Веточная модель
-Задачи Кодера живут на develop. main защищён: слияние develop→main только рукой Anna-Ch.
+Задачи Кодера живут на qwen-develop. main защищён: слияние qwen-develop→main только рукой Anna-Ch.
 Кодер не коммитит в main и не сливает ветки. В отчёте указывать ветку.
 
 ## Чтение docs/
