@@ -9,6 +9,7 @@ dist/
 build/
 target/
 .gradle/
+package-lock.json
 
 # Editors
 .vscode/
