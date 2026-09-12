@@ -1,0 +1,417 @@
+PS C:\astro-projects\context-064> Select-String -Path scripts\InspectOK-DOM.ps1 -Pattern '\$_\\s-(length|count|trim|trimstart|trimend|tolower|toupper|replace|split|substring)'
+
+scripts\InspectOK-DOM.ps1:306:                                            $_ -notmatch "Ответить" -and $_ -notmatch "$months" -and $_ -length -gt 10 
+
+PS C:\astro-projects\context-064>                                                                                                                                            
+PS C:\astro-projects\context-064> . 'C:\astro-projects\context-064\scripts\InspectOK-DOM.ps1'
+
+командлет в позиции InspectOK-DOM.ps1 командного конвейера 1
+Предоставьте значения для следующих параметров:
+Scenario: comments_author
+Port: 9224
+[CDP] Проверка endpoint: http://localhost:9224/json
+[CDP] Найдено вкладок: 3                                                                                                
+[URL] Сценарий 'comments_author' подтверждён: https://ok.ru/discussions/all/1/70000043118027/158192326669771
+[WS] Подключение: ws://localhost:9224/devtools/page/16CDEE41246FC7ED1EA553CBDC2DEFE7
+[WS] Успешно
+[CDP] Enable domains...
+ВНИМАНИЕ! Не удалось получить корень DOM. Секции DOM будут failed.
+[SAVE] Отчёт: C:\astro-projects\context-064\scripts\..\docs\dom-inspection\OK_comments_author_20260911_150530.json
+[STAT] Заполнено секций: 2 из 15
+PS C:\astro-projects\context-064>                                                            
+PS C:\astro-projects\context-064> . 'C:\astro-projects\context-064\scripts\InspectOK-DOM.ps1'
+
+командлет в позиции InspectOK-DOM.ps1 командного конвейера 1
+Предоставьте значения для следующих параметров:
+Scenario: profile_page
+Port: 9224
+[CDP] Проверка endpoint: http://localhost:9224/json
+[CDP] Найдено вкладок: 6                                                                                                
+[URL] Сценарий 'profile_page' подтверждён: https://ok.ru/profile/597269008402
+[WS] Подключение: ws://localhost:9224/devtools/page/16CDEE41246FC7ED1EA553CBDC2DEFE7
+[WS] Успешно
+[CDP] Enable domains...
+ВНИМАНИЕ! Не удалось получить корень DOM. Секции DOM будут failed.
+[SAVE] Отчёт: C:\astro-projects\context-064\scripts\..\docs\dom-inspection\OK_profile_page_20260911_150659.json
+[STAT] Заполнено секций: 2 из 15
+PS C:\astro-projects\context-064>                     
+PS C:\astro-projects\context-064> . 'C:\astro-projects\context-064\scripts\InspectOK-DOM.ps1'
+
+командлет в позиции InspectOK-DOM.ps1 командного конвейера 1
+Предоставьте значения для следующих параметров:
+Scenario: group_page
+Port: 9224
+[CDP] Проверка endpoint: http://localhost:9224/json
+[CDP] Найдено вкладок: 5                                                                                                
+[URL] Сценарий 'group_page' подтверждён: https://ok.ru/group/55367549321453
+[WS] Подключение: ws://localhost:9224/devtools/page/16CDEE41246FC7ED1EA553CBDC2DEFE7
+[WS] Успешно
+[CDP] Enable domains...
+ВНИМАНИЕ! Не удалось получить корень DOM. Секции DOM будут failed.
+[SAVE] Отчёт: C:\astro-projects\context-064\scripts\..\docs\dom-inspection\OK_group_page_20260911_151101.json
+[STAT] Заполнено секций: 2 из 15
+PS C:\astro-projects\context-064> 
+
+{
+  "sections": {
+    "10-PAGE_BEHAVIOR": {
+      "data": null,
+      "description": "PAGE_BEHAVIOR",
+      "status": "pending",
+      "note": ""
+    },
+    "01-PAGE": {
+      "data": {
+        "type": "profile_page",
+        "url": "https://ok.ru/profile/597269008402",
+        "title": "Одноклассники",
+        "portal": "ok.ru"
+      },
+      "description": "PAGE",
+      "status": "complete",
+      "note": ""
+    },
+    "05-EVENT_TEXT": {
+      "data": null,
+      "description": "EVENT_TEXT",
+      "status": "pending",
+      "note": ""
+    },
+    "11-SHADOW_DOM": {
+      "data": null,
+      "description": "SHADOW_DOM",
+      "status": "pending",
+      "note": ""
+    },
+    "03-ENTITY_CANDIDATES": {
+      "data": null,
+      "description": "ENTITY_CANDIDATES",
+      "status": "pending",
+      "note": ""
+    },
+    "07-ROOT_CONTEXT": {
+      "data": null,
+      "description": "ROOT_CONTEXT",
+      "status": "pending",
+      "note": ""
+    },
+    "04-EVENT_CONTAINER": {
+      "data": null,
+      "description": "EVENT_CONTAINER",
+      "status": "pending",
+      "note": ""
+    },
+    "14-SELECTORS": {
+      "data": null,
+      "description": "SELECTORS",
+      "status": "pending",
+      "note": ""
+    },
+    "13-RAW_HTML": {
+      "data": null,
+      "description": "RAW_HTML",
+      "status": "pending",
+      "note": ""
+    },
+    "15-NOTES": {
+      "data": {
+        "port": 9224,
+        "task": "TASK-0302",
+        "script_version": "2.1.0",
+        "websocket_used": true,
+        "profile": "user_01",
+        "browser_info_raw": "{}",
+        "scenario": "profile_page",
+        "inspection_date": "2026-09-11T15:06:59Z",
+        "guarded_access": true
+      },
+      "description": "NOTES",
+      "status": "complete",
+      "note": ""
+    },
+    "06-DATE_TIME": {
+      "data": null,
+      "description": "DATE_TIME",
+      "status": "pending",
+      "note": ""
+    },
+    "12-CONTEXT_MENU": {
+      "data": null,
+      "description": "CONTEXT_MENU",
+      "status": "pending",
+      "note": ""
+    },
+    "08-COMMENT_URL": {
+      "data": null,
+      "description": "COMMENT_URL",
+      "status": "pending",
+      "note": ""
+    },
+    "02-SELECTED_ENTITY": {
+      "data": null,
+      "description": "SELECTED_ENTITY",
+      "status": "pending",
+      "note": ""
+    },
+    "09-TRIANGLE_ANCHOR": {
+      "data": null,
+      "description": "TRIANGLE_ANCHOR",
+      "status": "pending",
+      "note": ""
+    }
+  },
+  "header": {
+    "ENTITY_TYPE": "unknown",
+    "EVENT_TYPE": "Comment/Post",
+    "PAGE_TYPE": "profile_page",
+    "URL": "https://ok.ru/profile/597269008402",
+    "ENTITY_NAME": "auto_detected",
+    "SOURCE_CONTEXT": "CDP WebSocket (PowerShell 7)",
+    "DATE": "11.09.2026",
+    "PORTAL": "ok.ru",
+    "TIME": "15:06:59"
+  }
+}
+=============
+{
+  "sections": {
+    "10-PAGE_BEHAVIOR": {
+      "data": null,
+      "description": "PAGE_BEHAVIOR",
+      "status": "pending",
+      "note": ""
+    },
+    "01-PAGE": {
+      "data": {
+        "type": "group_page",
+        "url": "https://ok.ru/group/55367549321453",
+        "title": "Одноклассники",
+        "portal": "ok.ru"
+      },
+      "description": "PAGE",
+      "status": "complete",
+      "note": ""
+    },
+    "05-EVENT_TEXT": {
+      "data": null,
+      "description": "EVENT_TEXT",
+      "status": "pending",
+      "note": ""
+    },
+    "11-SHADOW_DOM": {
+      "data": null,
+      "description": "SHADOW_DOM",
+      "status": "pending",
+      "note": ""
+    },
+    "03-ENTITY_CANDIDATES": {
+      "data": null,
+      "description": "ENTITY_CANDIDATES",
+      "status": "pending",
+      "note": ""
+    },
+    "07-ROOT_CONTEXT": {
+      "data": null,
+      "description": "ROOT_CONTEXT",
+      "status": "pending",
+      "note": ""
+    },
+    "04-EVENT_CONTAINER": {
+      "data": null,
+      "description": "EVENT_CONTAINER",
+      "status": "pending",
+      "note": ""
+    },
+    "14-SELECTORS": {
+      "data": null,
+      "description": "SELECTORS",
+      "status": "pending",
+      "note": ""
+    },
+    "13-RAW_HTML": {
+      "data": null,
+      "description": "RAW_HTML",
+      "status": "pending",
+      "note": ""
+    },
+    "15-NOTES": {
+      "data": {
+        "port": 9224,
+        "task": "TASK-0302",
+        "script_version": "2.1.0",
+        "websocket_used": true,
+        "profile": "user_01",
+        "browser_info_raw": "{}",
+        "scenario": "group_page",
+        "inspection_date": "2026-09-11T15:11:01Z",
+        "guarded_access": true
+      },
+      "description": "NOTES",
+      "status": "complete",
+      "note": ""
+    },
+    "06-DATE_TIME": {
+      "data": null,
+      "description": "DATE_TIME",
+      "status": "pending",
+      "note": ""
+    },
+    "12-CONTEXT_MENU": {
+      "data": null,
+      "description": "CONTEXT_MENU",
+      "status": "pending",
+      "note": ""
+    },
+    "08-COMMENT_URL": {
+      "data": null,
+      "description": "COMMENT_URL",
+      "status": "pending",
+      "note": ""
+    },
+    "02-SELECTED_ENTITY": {
+      "data": null,
+      "description": "SELECTED_ENTITY",
+      "status": "pending",
+      "note": ""
+    },
+    "09-TRIANGLE_ANCHOR": {
+      "data": null,
+      "description": "TRIANGLE_ANCHOR",
+      "status": "pending",
+      "note": ""
+    }
+  },
+  "header": {
+    "ENTITY_TYPE": "unknown",
+    "EVENT_TYPE": "Comment/Post",
+    "PAGE_TYPE": "group_page",
+    "URL": "https://ok.ru/group/55367549321453",
+    "ENTITY_NAME": "auto_detected",
+    "SOURCE_CONTEXT": "CDP WebSocket (PowerShell 7)",
+    "DATE": "11.09.2026",
+    "PORTAL": "ok.ru",
+    "TIME": "15:11:01"
+  }
+}
+======
+{
+  "sections": {
+    "10-PAGE_BEHAVIOR": {
+      "data": null,
+      "description": "PAGE_BEHAVIOR",
+      "status": "pending",
+      "note": ""
+    },
+    "01-PAGE": {
+      "data": {
+        "type": "comments_author",
+        "url": "https://ok.ru/discussions/all/1/70000043118027/158192326669771",
+        "title": "Одноклассники",
+        "portal": "ok.ru"
+      },
+      "description": "PAGE",
+      "status": "complete",
+      "note": ""
+    },
+    "05-EVENT_TEXT": {
+      "data": null,
+      "description": "EVENT_TEXT",
+      "status": "pending",
+      "note": ""
+    },
+    "11-SHADOW_DOM": {
+      "data": null,
+      "description": "SHADOW_DOM",
+      "status": "pending",
+      "note": ""
+    },
+    "03-ENTITY_CANDIDATES": {
+      "data": null,
+      "description": "ENTITY_CANDIDATES",
+      "status": "pending",
+      "note": ""
+    },
+    "07-ROOT_CONTEXT": {
+      "data": null,
+      "description": "ROOT_CONTEXT",
+      "status": "pending",
+      "note": ""
+    },
+    "04-EVENT_CONTAINER": {
+      "data": null,
+      "description": "EVENT_CONTAINER",
+      "status": "pending",
+      "note": ""
+    },
+    "14-SELECTORS": {
+      "data": null,
+      "description": "SELECTORS",
+      "status": "pending",
+      "note": ""
+    },
+    "13-RAW_HTML": {
+      "data": null,
+      "description": "RAW_HTML",
+      "status": "pending",
+      "note": ""
+    },
+    "15-NOTES": {
+      "data": {
+        "port": 9224,
+        "task": "TASK-0302",
+        "script_version": "2.1.0",
+        "websocket_used": true,
+        "profile": "user_01",
+        "browser_info_raw": "{}",
+        "scenario": "comments_author",
+        "inspection_date": "2026-09-11T15:05:30Z",
+        "guarded_access": true
+      },
+      "description": "NOTES",
+      "status": "complete",
+      "note": ""
+    },
+    "06-DATE_TIME": {
+      "data": null,
+      "description": "DATE_TIME",
+      "status": "pending",
+      "note": ""
+    },
+    "12-CONTEXT_MENU": {
+      "data": null,
+      "description": "CONTEXT_MENU",
+      "status": "pending",
+      "note": ""
+    },
+    "08-COMMENT_URL": {
+      "data": null,
+      "description": "COMMENT_URL",
+      "status": "pending",
+      "note": ""
+    },
+    "02-SELECTED_ENTITY": {
+      "data": null,
+      "description": "SELECTED_ENTITY",
+      "status": "pending",
+      "note": ""
+    },
+    "09-TRIANGLE_ANCHOR": {
+      "data": null,
+      "description": "TRIANGLE_ANCHOR",
+      "status": "pending",
+      "note": ""
+    }
+  },
+  "header": {
+    "ENTITY_TYPE": "unknown",
+    "EVENT_TYPE": "Comment/Post",
+    "PAGE_TYPE": "comments_author",
+    "URL": "https://ok.ru/discussions/all/1/70000043118027/158192326669771",
+    "ENTITY_NAME": "auto_detected",
+    "SOURCE_CONTEXT": "CDP WebSocket (PowerShell 7)",
+    "DATE": "11.09.2026",
+    "PORTAL": "ok.ru",
+    "TIME": "15:05:30"
+  }
+}
+===
